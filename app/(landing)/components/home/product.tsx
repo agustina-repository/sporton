@@ -5,41 +5,54 @@ import Button from "../ui/button";
 
 const productList = [
   {
-    name: "SportsOn Product 1",
+    name: "SportsOn Hyperfast Shoes",
     category: "Running",
-    price: 450000,
-    imgUrl: "product-1.png",
+    price: 329000,
+    imgUrl: "Group 13.png",
   },
   {
-    name: "SportsOn Product 2",
-    category: "Running",
-    price: 250000,
-    imgUrl: "product-1.png",
+    name: "SportsOn Rockets Tennis",
+    category: "Tennis",
+    price: 999000,
+    imgUrl: "Group 14.png",
   },
   {
-    name: "SportsOn Product 3",
+    name: "SportsOn Slowlivin",
     category: "Running",
-    price: 230000,
-    imgUrl: "product-3.png",
+    price: 119000,
+    imgUrl: "Group 15.png",
   },
   {
-    name: "SportsOn Product 4",
-    category: "Running",
-    price: 440000,
-    imgUrl: "product-4.png",
+    name: "SportsOn HyperSoccer v2",
+    category: "Football",
+    price: 458000,
+    imgUrl: "Group 16.png",
   },
   {
-    name: "SportsOn Product 5",
-    category: "Running",
-    price: 550000,
-    imgUrl: "product-5.png",
+    name: "SportsOn HyperSoccer v2",
+    category: "Football",
+    price: 458000,
+    imgUrl: "Group 16.png",
   },
   {
-    name: "SportsOn Product 6",
+    name: "SportsOn Slowlivin",
     category: "Running",
-    price: 650000,
-    imgUrl: "product-6.png",
+    price: 119000,
+    imgUrl: "Group 17.png",
   },
+  {
+    name: "SportsOn Hyperfast Shoes",
+    category: "Running",
+    price: 329000,
+    imgUrl: "Group 18.png",
+  },
+  {
+    name: "SportsOn Rockets Tennis",
+    category: "Tennis",
+    price: 999000,
+    imgUrl: "Group 19.png",
+  },
+ 
 ];
 
 const ProductSection = () => {
