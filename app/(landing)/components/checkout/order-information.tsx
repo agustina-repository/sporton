@@ -1,44 +1,62 @@
-import CardWithHeader from "../ui/card-with-header";
+"use client";
 
-const OrderInformation = () => {
+import CardWithHeader from "../ui/card-with-header";
+import { CustomerInfo } from "@/app/hooks/use-cart-store";
+
+type TOrderInformation = {
+  formData: CustomerInfo;
+  setFormData: React.Dispatch<React.SetStateAction<CustomerInfo>>;
+};
+
+const OrderInformation = ({ formData, setFormData }: TOrderInformation) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
   return (
     <CardWithHeader title="Order Information">
-      <div className="p-5">
+      <div className="p-5 space-y-5">
         {/* Full Name */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="full_name" className="text-sm font-medium">
-            Full Name
-          </label>
+          <label className="text-sm font-medium">Full Name</label>
           <input
-            id="full_name"
+            name="customerName"
             type="text"
             placeholder="Type your full name"
+            value={formData.customerName}
+            onChange={handleInputChange}
             className="w-full rounded-md bg-gray-100 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
 
         {/* Whatsapp Number */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="wa_number" className="text-sm font-medium">
-            Whatsapp Number
-          </label>
+          <label className="text-sm font-medium">Whatsapp Number</label>
           <input
-            id="wa_number"
+            name="customerContact"
             type="text"
             placeholder="+62xxxx"
+            value={formData.customerContact ?? ""}
+            onChange={handleInputChange}
             className="w-full rounded-md bg-gray-100 px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
 
         {/* Shipping Address */}
         <div className="flex flex-col gap-2">
-          <label htmlFor="shipping_address" className="text-sm font-medium">
-            Shipping Address
-          </label>
+          <label className="text-sm font-medium">Shipping Address</label>
           <textarea
-            id="shipping_address"
+            name="customerAddress"
             rows={5}
             placeholder="Example Street, 18, West Jakarta, Indonesia, 66521"
+            value={formData.customerAddress}
+            onChange={handleInputChange}
             className="w-full rounded-md bg-gray-100 px-4 py-3 text-sm outline-none resize-none focus:ring-2 focus:ring-primary"
           />
         </div>
