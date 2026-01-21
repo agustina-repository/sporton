@@ -12,14 +12,14 @@ const transactionData = [
   {
     date: "23/02/2026 13:32",
     customer: "Delon Marx",
-    contact: "+123123123 ",
+    contact: "08823291231",
     total: 753000,
     status: "PAID",
   },
   {
     date: "23/02/2026 13:32",
     customer: "Delon Marx",
-    contact: "08823291231 ",
+    contact: "08823291231",
     total: 753000,
     status: "REJECTED",
   },
