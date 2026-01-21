@@ -4,7 +4,8 @@ import { logout } from "@/app/services/auth.service";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
 import {
   FiBox,
   FiCreditCard,
