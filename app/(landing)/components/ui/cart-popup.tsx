@@ -75,7 +75,7 @@ const CartPopup = () => {
         >
           Checkout Now <FiArrowRight />
         </Button>
-      </div>
+      </div>  
     </div>
   );
 };
