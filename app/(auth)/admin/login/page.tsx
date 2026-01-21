@@ -21,6 +21,7 @@ const LoginPage = () => {
   }, [router])
 
   const handleLogin = async () => {
+    setIsLoading(true);
     try{
       const data = await login({email, password});
 

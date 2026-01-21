@@ -2,10 +2,13 @@ import Button from "@/app/(landing)/components/ui/button";
 import Modal from "../ui/modal";
 import ImageUploadPreview from "../ui/image-upload-preview";
 import { useState } from "react";
+import { Bank } from "@/app/types";
 
 type TBankInfoModalProps = {
   isOpen: boolean;
   onClose: () => void;
+  bank: Bank | null;
+  onSuccess: () => void;
 };
 
 const BankInfoModal = ({ isOpen, onClose }: TBankInfoModalProps) => {
